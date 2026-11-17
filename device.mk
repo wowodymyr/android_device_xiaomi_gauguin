@@ -17,6 +17,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/gauguin/gauguin-vendor.mk)
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/miuicamera-sweet/device.mk)
+
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
@@ -25,7 +28,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    GauguinApertureOverlay \
     GauguinCarrierConfigOverlay \
     GauguinFrameworksOverlay \
     GauguinLauncherOverlay \

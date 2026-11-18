@@ -81,6 +81,9 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=true
+# Vidhance EIS crashes the camera provider while recording;
+# the EIS3 video pipeline works without it
+vendor.vidhance.enabled=0
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2

@@ -183,4 +183,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 include vendor/xiaomi/gauguin/BoardConfigVendor.mk
 
 # MiuiCamera
--include vendor/miuicamera-sweet/BoardConfig.mk
+-include vendor/miuicamera-gauguin/BoardConfig.mk

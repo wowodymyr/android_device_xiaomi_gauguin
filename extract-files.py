@@ -57,6 +57,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib64/camera/components/com.mi.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
+    # Allocate sizeof(android::GraphicBuffer) of the current libui (3376)
+    # instead of the A12 one (256) before constructing it in place
+    'vendor/lib64/camera/components/com.vidhance.node.eis.so': blob_fixup()
+        .binary_regex_replace(b'\x02\x20\x80\x52', b'\x02\xa6\x81\x52'),
     ('vendor/lib64/libarcsoft_hta.so', 'vendor/lib64/libarcsoft_hdrplus_hvx_stub.so', 'vendor/lib64/libarcsoft_super_night_raw.so', 'vendor/lib64/libmialgo_rfs.so', 'vendor/lib64/libMIAIHDRhvx_interface.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')

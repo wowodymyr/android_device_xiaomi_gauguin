@@ -272,6 +272,8 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Media
+$(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
 

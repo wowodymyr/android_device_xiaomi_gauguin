@@ -1,5 +1,6 @@
 # All unpinned blobs are extracted from gauguinin-user 12 RKQ1.200826.002 V14.0.3.0.SJSINXM release-keys.
 # FP4 : Fairphone/FP4eea/FP4:15/FP4.QREL.15.20.0/15.20.0:user/release-keys
+# motorola sm8550-common : edge 40 pro, 16 W1TRS36H.56-13-1-3 cb3b97-65907, variant RETEU
 # gauguin_CN: gauguin-user 12 RKQ1.200826.002 V14.0.2.0.SJSCNXM release-keys
 # gauguin_GL: gauguin-user 12 RKQ1.200826.002 V14.0.2.0.SJSMIXM release-keys
 
@@ -646,22 +647,9 @@ vendor/lib/libgpudataproducer.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
 vendor/lib64/libVkLayer_q3dtools.so
-vendor/lib64/libadreno_utils.so
 vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
 
 # Graphics (Adreno Firmware)
 vendor/firmware/a615_zap.b00
@@ -674,7 +662,25 @@ vendor/firmware/a630_sqe.fw
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
+
+# Graphics (64-bit, Adreno V@0676.77) - from motorola sm8550-common
+vendor/lib64/egl/eglSubDriverAndroid.so|8a48c1876664f4ae4140135ceb230f8f71d9b52f
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|4aab17061f7a9f72ac0f387b0651f546e2af98f9
+vendor/lib64/egl/libGLESv1_CM_adreno.so|f3b231b22c5a7f66e16937b873fbf260f730f1f7
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|26dd95d57212267735a13d91df032657236606c9
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|2a15f0e18e769d67e7f320d7b70c672ba6b06a40
+vendor/lib64/egl/libq3dtools_esx.so|9940e5fc33ac1b48ffff4de69bf76c79791a6076
+vendor/lib64/hw/vulkan.adreno.so|a542156e9ecdccb1d000863aab22a95c69e6da7e
+vendor/lib64/libCB.so|e04dc22a8eeeb5b1fc13f5d889055f1930e76ca7
+vendor/lib64/libOpenCL.so|3a75415c2b091c55632d03ec993e29910f982ae4
+vendor/lib64/libadreno_app_profiles.so|0cd4354eea0d944dc295021a8743c629e822ffd1
+vendor/lib64/libadreno_utils.so|a951406d629c7e7ea10b75d01d18032e786ae80e
+vendor/lib64/libgpudataproducer.so|d480b1974521eeb7acd8a15ccddf310d8f73dca8
+vendor/lib64/libgsl.so|02452721d8cba0e9cff7364c6ce81e75bff0e27e
+vendor/lib64/libllvm-glnext.so|d4bb4239456582ca54b2947204888375edc7b0c4
+vendor/lib64/libllvm-qcom.so|f4fb24118e4a287e76f18e87ac371bd8e59ed217
+vendor/lib64/libllvm-qgl.so|e5fb46e06ac3fa4b4e1971bee173ce7fbabb7939
+vendor/lib64/vendor.qti.qspmhal@1.0.so|1a1c30f3d6024e2c745c1e40ee60e16306584c03
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk

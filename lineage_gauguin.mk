@@ -14,6 +14,9 @@ $(call inherit-product, device/xiaomi/gauguin/device.mk)
 # DerpFest: Quick Tap (ColumbusService) needs Pixel-only sensors
 TARGET_SUPPORTS_QUICK_TAP := false
 
+# DerpFest: no background blur
+TARGET_SUPPORTS_BLUR := false
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
